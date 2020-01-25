@@ -18,7 +18,9 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html')
 });
 
-
+app.post("/api/exercise/new-user",function(req,res){
+  res.send({username:"",_id:"" })
+})
 // Not found middleware
 app.use((req, res, next) => {
   return next({status: 404, message: 'not found'})
